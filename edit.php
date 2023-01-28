@@ -1,0 +1,50 @@
+<?php
+ include_once("templates/header.php");
+?>
+
+ <div class="container">
+ <?php include_once("templates/backbtn.html"); ?>
+    <h1 id="main-title">Editar contato</h1>
+    <form id="create-form" action="<?= $BASE_URL ?>config/process.php" method="POST">
+      <input type="hidden" name="type" value="edit">  
+      <input type="hidden" name="id" value="<?= $pedido['id'] ?>">  
+      <div class="form-group">
+         <label for="pedido">Pedido:</label>
+         <input type="text" class="form-control" name="pedido" id="pedido" placeholder="Digite o pedido" value="<?= $contact['pedido'] ?>" required>
+      </div>
+      <div class="form-group">
+         <label for="name">Nome do contato:</label>
+         <input type="text" class="form-control" name="name" id="name" placeholder="Digite o nome" value="<?= $contact['name'] ?>" required>
+      </div> 
+      <div class="form-group">
+         <label for="status">Status do pedido:</label>
+         <input type="text" class="form-control" name="status" id="addres" placeholder="Altere o status do pedido" value="<?= $pedido['status'] ?>" required>
+      </div>
+      <div class="form-group">
+         <label for="phone">Telefone:</label>
+         <input type="text" class="form-control" name="phone" id="phone" placeholder="Digite o telefone" value="<?= $pedido['phone'] ?>" required>
+      </div>
+      <div class="form-group">
+         <label for="address">Endereço do pedido:</label>
+         <input type="text" class="form-control" name="address" id="address" placeholder="Informe o endereço" value="<?= $pedido['address'] ?>" required>
+      </div>
+      <div class="form-group">
+         <label for="date">Data do pedido:</label>
+         <input type="date" class="form-control" name="date" id="date" placeholder="Informe a data do pedido" value="<?= $pedido['date'] ?>" required>
+      </div>
+      <div class="form-group">
+         <label for="value">Valor do pedido:</label>
+         <input type="text" class="form-control" name="value" id="value" placeholder="Informe o valor do pedido" value="<?= $pedido['value'] ?>" required>
+      </div>
+      <div class="form-group">
+         <label for="observations">Observações:</label>
+         <textarea type="text" class="form-control" name="observations" id="observations" placeholder="Quais as observações" rows="3"><?= $contact['observations'] ?></textarea>
+      </div>
+      <button id="btn" type="submit" class="btn btn-primary">Atualizar</button>
+    </form>
+ </div>
+    
+
+<?php
+ include_once("templates/footer.php");
+?>
