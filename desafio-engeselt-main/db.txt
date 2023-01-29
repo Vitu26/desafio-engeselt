@@ -1,0 +1,10 @@
+CREATE TABLE contacts(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR (200),
+    phone VARCHAR (50),
+    address VARCHAR (50),
+    stats VARCHAR (50),
+    price VARCHAR (50),
+    compra VARCHAR (100),
+    observations TEXT
+)
